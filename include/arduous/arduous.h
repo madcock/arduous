@@ -13,7 +13,11 @@ extern "C" {
 }
 
 constexpr unsigned int TIMING_FPS = 60;
+#if !defined(SF2000)
 constexpr unsigned int TIMING_SAMPLE_RATE = 48000;
+#else
+constexpr unsigned int TIMING_SAMPLE_RATE = 11025;
+#endif
 constexpr unsigned int DISPLAY_WIDTH = 128;
 constexpr unsigned int DISPLAY_HEIGHT = 64;
 

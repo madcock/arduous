@@ -1,0 +1,40 @@
+INCFLAGS := -I$(CORE_DIR) \
+				-I$(CORE_DIR)/include \
+				-I$(CORE_DIR)/include/arduous \
+				-I$(CORE_DIR)/include/libretro \
+				-I$(CORE_DIR)/include/stdext \
+				-I$(CORE_DIR)/simavr/simavr/sim \
+				-I$(CORE_DIR)/simavr/simavr/cores \
+				-I$(CORE_DIR)/simavr/examples/parts
+
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/avr_acomp.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/avr_adc.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/avr_bitbang.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/avr_eeprom.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/avr_extint.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/avr_flash.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/avr_ioport.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/avr_lin.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/avr_spi.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/avr_timer.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/avr_twi.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/avr_uart.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/avr_usb.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/avr_watchdog.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/sim_avr.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/sim_cmds.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/sim_core.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/sim_cycle_timers.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/sim_hex.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/sim_interrupts.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/sim_io.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/sim_irq.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/sim_utils.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/sim/sim_vcd_file.c
+SOURCES_C += $(CORE_DIR)/simavr/simavr/cores/sim_mega32u4.c
+SOURCES_C += $(CORE_DIR)/simavr/examples/parts/ssd1306_virt.c
+SOURCES_C += $(CORE_DIR)/src/sim_fake_gdb.c
+	
+SOURCES_CXX += $(CORE_DIR)/src/libretro/libretro.cpp
+SOURCES_CXX += $(CORE_DIR)/src/arduous/arduous.cpp
+SOURCES_CXX += $(CORE_DIR)/src/arduous/speaker.cpp

@@ -170,6 +170,7 @@ void retro_reset(void) { arduous->reset(); }
 
 void retro_run(void) {
     ArduousButtonState buttonState;
+    input_poll_cb();
     buttonState.buttonUp = input_state_cb(0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_UP);
     buttonState.buttonDown = input_state_cb(0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_DOWN);
     buttonState.buttonLeft = input_state_cb(0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_LEFT);
